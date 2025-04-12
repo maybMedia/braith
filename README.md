@@ -1,21 +1,39 @@
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Braith_May-blue)][LinkedIn]
+# braith
 
-## Hi, I'm Braith
+This template should help get you started developing with Vue 3 in Vite.
 
-I'm currently working as an associate software engineer at WiseTech Global. This repo is the source of my website with all things about me. Take a look and get to know me!
+## Recommended IDE Setup
 
-### My Skills
-- C# #️⃣
-- Java ☕
-- Python 🐍
-- JavaScript <img src="https://github.com/user-attachments/assets/05288e03-a2ce-46d8-bd53-4ce0748023ca" alt="JavaScript" width="16"/> 
-- React <img src="https://github.com/user-attachments/assets/28ab55d8-6941-43c0-a0e2-19438f117d83" alt="React" width="16"/>
-- Vue <img src="https://github.com/user-attachments/assets/87660df1-4152-411f-8cbf-55ae101dc8c1" alt="Vue" width="16"/>
-- NextJs <img src="https://github.com/user-attachments/assets/e330b023-0374-422b-96ff-e71a4684e849" alt="NextJS" width="16"/>
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-### My Mottos
-- Love every day
-- Be better tomorrow than I am today
-- Try new things
+## Type Support for `.vue` Imports in TS
 
-[LinkedIn]: https://www.linkedin.com/in/braith-may-4361242a9/
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vite.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```
