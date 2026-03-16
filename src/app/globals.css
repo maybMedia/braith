@@ -1,26 +1,158 @@
 @import "tailwindcss";
 
+/* -----------------------------
+   CSS Variables
+----------------------------- */
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
+  --foreground: #0f172a;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  --border: #e2e8f0;
+
+  --radius: 0.75rem;
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #020617;
+    --foreground: #f8fafc;
+
+    --muted: #0f172a;
+    --muted-foreground: #94a3b8;
+
+    --border: #1e293b;
+    color-scheme: dark;
   }
+}
+
+/* -----------------------------
+   Base Styles
+----------------------------- */
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* -----------------------------
+   Typography
+----------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+:where(p) {
+  @apply text-base leading-relaxed;
+}
+
+/* -----------------------------
+   Layout helpers
+----------------------------- */
+
+.container-custom {
+  @apply max-w-6xl mx-auto px-6;
+}
+
+/* -----------------------------
+   Buttons
+----------------------------- */
+
+.btn-primary {
+  @apply inline-flex items-center justify-center
+  rounded-lg bg-blue-600 text-white
+  px-6 py-3 font-medium
+  transition-all duration-200
+  hover:bg-blue-700 active:scale-95;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center
+  rounded-lg border border-slate-300
+  px-6 py-3 font-medium
+  hover:bg-slate-100 dark:hover:bg-slate-800;
+}
+
+/* -----------------------------
+   Cards
+----------------------------- */
+
+.card {
+  @apply bg-white dark:bg-slate-900
+  border border-slate-200 dark:border-slate-800
+  rounded-xl shadow-sm
+  p-6;
+}
+
+/* -----------------------------
+   Links
+----------------------------- */
+
+a {
+  @apply transition-colors duration-200;
+}
+
+/* -----------------------------
+   Selection
+----------------------------- */
+
+::selection {
+  background: #2563eb;
+  color: white;
+}
+
+/* -----------------------------
+   Scrollbar (modern)
+----------------------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5f5;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
