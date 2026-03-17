@@ -8,6 +8,14 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
   title: "Braith.Site",
   description: "I'm Braith, I'll build your website.",
+  metadataBase: new URL("https://braithwebdesign.site"),
+  openGraph: {
+    type: "website",
+    title: "Braith.Site",
+    description: "I'm Braith, I'll build your website.",
+    siteName: "Braith.Site",
+    url: "https://braithwebdesign.site",
+  },
 };
 
 export default function RootLayout({

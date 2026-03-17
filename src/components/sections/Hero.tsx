@@ -51,7 +51,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden lg:mx-auto lg:mt-6 lg:w-[90vw] lg:max-w-560 lg:rounded-4xl lg:border lg:border-slate-200/80 lg:shadow-2xl lg:shadow-slate-900/10 dark:lg:border-slate-800/80 dark:lg:shadow-black/20">
       <div className="absolute inset-0 -z-10 bg-linear-to-br from-blue-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950" />
-      <div className="absolute inset-0 -z-10 opacity-40 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.15),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.08),transparent_30%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.22),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(148,163,184,0.14),transparent_30%)]" />
+      <div className="absolute inset-0 -z-10 hidden opacity-40 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.15),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.08),transparent_30%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.22),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(148,163,184,0.14),transparent_30%)] md:block" />
 
       <div className="container-custom py-24 md:py-32">
         <div className="grid items-center gap-14 lg:grid-cols-2">
