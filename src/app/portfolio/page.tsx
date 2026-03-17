@@ -7,8 +7,8 @@ export default function PortfolioPage() {
     <main className="bg-white dark:bg-slate-950">
       <section className="container-custom py-20 md:py-24">
         <div className="relative overflow-hidden rounded-4xl border border-slate-200 bg-linear-to-br from-white via-slate-50 to-cyan-50 px-6 py-12 shadow-sm md:px-10 dark:border-slate-800 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
-          <div className="absolute -left-16 top-0 h-40 w-40 rounded-full bg-blue-200/50 blur-3xl dark:bg-blue-500/10" />
-          <div className="absolute -right-12 bottom-0 h-48 w-48 rounded-full bg-cyan-200/50 blur-3xl dark:bg-cyan-400/10" />
+          <div className="pointer-events-none absolute -left-16 top-0 hidden h-40 w-40 rounded-full bg-blue-200/50 blur-3xl dark:bg-blue-500/10 md:block" />
+          <div className="pointer-events-none absolute -right-12 bottom-0 hidden h-48 w-48 rounded-full bg-cyan-200/50 blur-3xl dark:bg-cyan-400/10 md:block" />
 
           <div className="relative mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-medium text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200">
@@ -44,7 +44,7 @@ export default function PortfolioPage() {
               key={project.title}
               className="group relative flex h-full w-full max-w-2xl flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.35rem)] dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-500/40 dark:hover:shadow-slate-950/40"
             >
-              <div className="absolute right-0 top-0 h-28 w-28 rounded-full bg-blue-100/70 blur-3xl transition duration-300 group-hover:bg-blue-200/80 dark:bg-blue-500/10 dark:group-hover:bg-blue-400/15" />
+              <div className="pointer-events-none absolute right-0 top-0 hidden h-28 w-28 rounded-full bg-blue-100/70 blur-3xl transition duration-300 group-hover:bg-blue-200/80 dark:bg-blue-500/10 dark:group-hover:bg-blue-400/15 md:block" />
 
               <div className="relative h-56 w-full bg-slate-200 dark:bg-slate-800">
                 <Image
@@ -99,7 +99,7 @@ export default function PortfolioPage() {
       <section className="pb-20 md:pb-24">
         <div className="container-custom">
           <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-linear-to-br from-white via-slate-50 to-cyan-50 px-6 py-12 text-center shadow-sm md:px-12 dark:border-slate-800 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
-            <div className="absolute left-1/2 top-0 h-32 w-32 -translate-x-1/2 rounded-full bg-cyan-200/40 blur-3xl dark:bg-cyan-400/10" />
+            <div className="pointer-events-none absolute left-1/2 top-0 hidden h-32 w-32 -translate-x-1/2 rounded-full bg-cyan-200/40 blur-3xl dark:bg-cyan-400/10 md:block" />
             <h2 className="text-3xl font-semibold text-slate-900 dark:text-slate-100">
               Want something like this for your business?
             </h2>

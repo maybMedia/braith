@@ -5,8 +5,8 @@ export default function CTASection() {
     <section className="bg-white dark:bg-slate-950">
       <div className="container-custom py-24">
         <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-linear-to-br from-slate-50 via-white to-blue-50 px-6 py-14 shadow-xl md:px-12 md:py-16 dark:border-white/10 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 dark:shadow-2xl">
-          <div className="absolute -left-10 top-0 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl dark:bg-blue-500/20" />
-          <div className="absolute -right-10 bottom-0 h-40 w-40 rounded-full bg-cyan-400/10 blur-3xl" />
+          <div className="pointer-events-none absolute -left-10 top-0 hidden h-40 w-40 rounded-full bg-blue-500/10 blur-3xl dark:bg-blue-500/20 md:block" />
+          <div className="pointer-events-none absolute -right-10 bottom-0 hidden h-40 w-40 rounded-full bg-cyan-400/10 blur-3xl md:block" />
 
           <div className="relative z-10 mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center rounded-full border border-blue-200 bg-white/80 px-4 py-1.5 text-sm font-medium text-blue-700 dark:border-blue-400/20 dark:bg-blue-500/10 dark:text-blue-200">
