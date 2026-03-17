@@ -4,7 +4,6 @@ import {
   Head,
   Hr,
   Html,
-  Img,
   Preview,
   Section,
   Text,
@@ -19,7 +18,6 @@ type EmailLayoutProps = {
 
 export default function EmailLayout({
   preview,
-  logoUrl,
   children,
 }: EmailLayoutProps) {
   return (
@@ -29,15 +27,6 @@ export default function EmailLayout({
       <Body style={body}>
         <Container style={container}>
           <Section style={brandBar}>
-            {logoUrl ? (
-              <Img
-                src={logoUrl}
-                alt="Braith Websites"
-                width="84"
-                height="84"
-                style={logo}
-              />
-            ) : null}
             <Text style={brandName}>Braith Websites</Text>
             <Text style={brandTagline}>
               Modern websites for local businesses
@@ -50,7 +39,7 @@ export default function EmailLayout({
 
           <Section style={footer}>
             <Text style={footerText}>
-              Braith Websites
+              Braith.Site
               <br />
               Fast, modern websites built to help local businesses look more
               professional and win more enquiries.
@@ -79,13 +68,6 @@ const brandBar = {
   background: "linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)",
   borderRadius: "20px 20px 0 0",
   padding: "28px 32px 20px",
-};
-
-const logo = {
-  display: "block",
-  width: "84px",
-  height: "84px",
-  margin: "0 0 18px",
 };
 
 const brandName = {
