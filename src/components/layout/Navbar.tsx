@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -15,8 +16,11 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-2 text-lg font-semibold tracking-tight text-slate-900 dark:text-slate-100"
         >
-          <span className="text-blue-600">B</span>
-          <span className="hidden sm:block">Braith.Web</span>
+          <Image src="/images/logos/braith-web-logo.png" alt="Braith.Web" width={48} height={48} />
+          <span className="hidden sm:flex items-center gap-0">
+            <span className="text-blue-500 dark:text-blue-300">Braith.</span>
+            <span className="text-teal-400 dark:text-teal-200">Site</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -34,13 +38,6 @@ export default function Navbar() {
             className="transition hover:text-blue-600 dark:hover:text-blue-400"
           >
             Portfolio
-          </Link>
-
-          <Link
-            href="/pricing"
-            className="transition hover:text-blue-600 dark:hover:text-blue-400"
-          >
-            Pricing
           </Link>
 
           <Link
@@ -103,10 +100,6 @@ export default function Navbar() {
 
           <Link href="/portfolio" onClick={() => setOpen(false)}>
             Portfolio
-          </Link>
-
-          <Link href="/pricing" onClick={() => setOpen(false)}>
-            Pricing
           </Link>
 
           <Link href="/about" onClick={() => setOpen(false)}>

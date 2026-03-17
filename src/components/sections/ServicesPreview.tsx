@@ -5,6 +5,7 @@ import {
   RefreshCw,
   UtensilsCrossed,
   Wrench,
+  SearchCode
 } from "lucide-react";
 import { services, type ServiceIcon } from "@/data/services";
 
@@ -13,12 +14,13 @@ const serviceIcons: Record<ServiceIcon, LucideIcon> = {
   "utensils-crossed": UtensilsCrossed,
   "refresh-cw": RefreshCw,
   wrench: Wrench,
+  "search-code": SearchCode,
 };
 
 export default function ServicesPreview() {
   return (
     <section className="bg-white dark:bg-slate-950">
-      <div className="mx-auto w-full max-w-360 px-6 py-24">
+      <div className="mx-auto w-full max-w-screen-2xl px-6 py-24 2xl:max-w-screen-[1800px]">
         <div className="mx-auto max-w-2xl text-center">
           <div className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-sm font-medium text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200">
             Services
@@ -35,7 +37,7 @@ export default function ServicesPreview() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {services.map((service) => (
             <div
               key={service.title}
