@@ -72,50 +72,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/90">
-              <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
-                What I focus on
-              </h2>
-
-              <div className="mt-6 space-y-5 text-slate-600 dark:text-slate-300">
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                    Clear messaging
-                  </h3>
-                  <p className="mt-2 leading-7">
-                    Helping businesses explain what they do in a way customers
-                    can understand quickly.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                    Modern design
-                  </h3>
-                  <p className="mt-2 leading-7">
-                    Clean, professional layouts that make a stronger first
-                    impression than outdated websites.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                    Better customer action
-                  </h3>
-                  <p className="mt-2 leading-7">
-                    Websites built to encourage enquiries, calls, bookings, and
-                    other real business outcomes.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-20 md:pb-24">
-        <div className="container-custom">
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
               <div className="pointer-events-none absolute right-0 top-0 hidden h-28 w-28 rounded-full bg-blue-100/70 blur-3xl dark:bg-blue-500/10 md:block" />
 
@@ -155,6 +111,50 @@ export default function AboutPage() {
                 I can guarantee clear communication, a simple process, and a
                 website that helps your business stand out and grow.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-20 md:pb-24">
+        <div className="container-custom">
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/90">
+              <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+                What I focus on
+              </h2>
+
+              <div className="mt-6 space-y-5 text-slate-600 dark:text-slate-300">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                    Clear messaging
+                  </h3>
+                  <p className="mt-2 leading-7">
+                    Helping businesses explain what they do in a way customers
+                    can understand quickly.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                    Modern design
+                  </h3>
+                  <p className="mt-2 leading-7">
+                    Clean, professional layouts that make a stronger first
+                    impression than outdated websites.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                    Better customer action
+                  </h3>
+                  <p className="mt-2 leading-7">
+                    Websites built to encourage enquiries, calls, bookings, and
+                    other real business outcomes.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-linear-to-br from-slate-50 to-white p-8 shadow-sm dark:border-slate-800 dark:from-slate-900 dark:to-slate-900">

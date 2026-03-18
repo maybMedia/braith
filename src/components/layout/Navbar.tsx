@@ -61,22 +61,41 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-          className="relative z-20 flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/80 bg-white/60 text-slate-900 backdrop-blur transition hover:bg-white/80 dark:border-white/10 dark:bg-slate-900/80 dark:text-slate-100 dark:hover:bg-slate-800/90 md:hidden"
+          className={`group relative z-20 flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 active:scale-95 md:hidden ${
+            open
+              ? "border-blue-400/40 bg-slate-900/95 text-white shadow-[0_14px_35px_rgba(37,99,235,0.28)] dark:border-cyan-300/30"
+              : "border-slate-200/80 bg-white/80 text-slate-900 shadow-[0_10px_30px_rgba(15,23,42,0.10)] hover:border-blue-200 hover:shadow-[0_14px_35px_rgba(37,99,235,0.18)] dark:border-white/10 dark:bg-slate-900/80 dark:text-slate-100 dark:hover:border-blue-400/20"
+          }`}
         >
+          <span className="pointer-events-none absolute inset-0">
+            <span className="absolute inset-px rounded-[calc(1rem-1px)] bg-linear-to-br from-white via-blue-50 to-cyan-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800" />
+            <span className="absolute inset-x-2 top-0 h-px bg-linear-to-r from-transparent via-white/90 to-transparent dark:via-white/25" />
+            <span
+              className={`absolute -right-4 -top-4 h-12 w-12 rounded-full bg-blue-400/25 blur-2xl transition-opacity duration-300 dark:bg-blue-500/20 ${
+                open ? "opacity-100" : "opacity-70 group-hover:opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute -bottom-5 -left-4 h-12 w-12 rounded-full bg-cyan-300/25 blur-2xl transition-opacity duration-300 dark:bg-cyan-400/15 ${
+                open ? "opacity-100" : "opacity-60 group-hover:opacity-90"
+              }`}
+            />
+          </span>
+
           <span className="relative h-4 w-6">
             <span
-              className={`absolute left-0 top-0 h-0.5 w-6 origin-center bg-current transition-transform duration-300 ${
-                open ? "translate-y-1.75 rotate-45" : ""
+              className={`absolute left-0 top-0 h-0.5 w-6 origin-center rounded-full bg-current transition-all duration-300 ${
+                open ? "translate-y-1.75 rotate-45" : "group-hover:w-5"
               }`}
             />
             <span
-              className={`absolute left-0 top-1.75 h-0.5 w-6 bg-current transition-all duration-300 ${
-                open ? "opacity-0" : "opacity-100"
+              className={`absolute left-0 top-1.75 h-0.5 w-6 rounded-full bg-current transition-all duration-300 ${
+                open ? "scale-x-0 opacity-0" : "opacity-100"
               }`}
             />
             <span
-              className={`absolute left-0 top-3.5 h-0.5 w-6 origin-center bg-current transition-transform duration-300 ${
-                open ? "-translate-y-1.75 -rotate-45" : ""
+              className={`absolute left-0 top-3.5 h-0.5 origin-center rounded-full bg-current transition-all duration-300 ${
+                open ? "w-6 -translate-y-1.75 -rotate-45" : "w-4 group-hover:w-5"
               }`}
             />
           </span>
