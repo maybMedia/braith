@@ -3,23 +3,23 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://braithwebdesign.site",
+      url: "https://www.braithwebdesign.site",
       lastModified: new Date(),
     },
     {
-      url: "https://braithwebdesign.site/services",
+      url: "https://www.braithwebdesign.site/services",
       lastModified: new Date(),
     },
     {
-      url: "https://braithwebdesign.site/portfolio",
+      url: "https://www.braithwebdesign.site/portfolio",
       lastModified: new Date(),
     },
     {
-      url: "https://braithwebdesign.site/about",
+      url: "https://www.braithwebdesign.site/about",
       lastModified: new Date(),
     },
     {
-      url: "https://braithwebdesign.site/contact",
+      url: "https://www.braithwebdesign.site/contact",
       lastModified: new Date(),
     },
   ];
