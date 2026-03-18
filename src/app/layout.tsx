@@ -9,12 +9,24 @@ export const metadata: Metadata = {
   title: "Braith.Site",
   description: "I'm Braith, I'll build your website.",
   metadataBase: new URL("https://braithwebdesign.site"),
+  twitter: {
+    card: "summary_large_image",
+    title: "Braith.Site",
+    description: "I'm Braith, I'll build your website.",
+    images: ["/images/logos/braith-web-logo.png"],
+  },
   openGraph: {
     type: "website",
     title: "Braith.Site",
     description: "I'm Braith, I'll build your website.",
     siteName: "Braith.Site",
     url: "https://braithwebdesign.site",
+    images: [
+      {
+        url: "/images/logos/braith-web-logo.png",
+        alt: "Braith.Site logo",
+      },
+    ],
   },
 };
 
