@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   type LucideIcon,
@@ -9,6 +10,26 @@ import {
 } from "lucide-react";
 import { services } from "@/data/services";
 import type { ServiceIcon } from "@/data/services";
+
+export const metadata: Metadata = {
+  title: "Services | Braith.Site",
+  description:
+    "Explore website services for local businesses, including new websites, redesigns, mobile-friendly upgrades, and ongoing support.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Services | Braith.Site",
+    description:
+      "Website services for local businesses, from new builds and redesigns to support and optimisation.",
+    url: "/services",
+  },
+  twitter: {
+    title: "Services | Braith.Site",
+    description:
+      "Website services for local businesses, from new builds and redesigns to support and optimisation.",
+  },
+};
 
 const serviceIcons: Record<ServiceIcon, LucideIcon> = {
   "heart-handshake": HeartHandshake,

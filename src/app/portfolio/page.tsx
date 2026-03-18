@@ -1,6 +1,27 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/projects";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Braith.Site",
+  description:
+    "Browse recent website projects and examples from Braith.Site to see the style, quality, and business-focused approach behind each build.",
+  alternates: {
+    canonical: "/portfolio",
+  },
+  openGraph: {
+    title: "Portfolio | Braith.Site",
+    description:
+      "See recent website projects and examples built for modern, credible local business websites.",
+    url: "/portfolio",
+  },
+  twitter: {
+    title: "Portfolio | Braith.Site",
+    description:
+      "See recent website projects and examples built for modern, credible local business websites.",
+  },
+};
 
 export default function PortfolioPage() {
   return (

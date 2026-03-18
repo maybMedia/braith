@@ -1,4 +1,25 @@
+import type { Metadata } from "next";
 import ContactForm from "@/components/forms/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact | Braith.Site",
+  description:
+    "Get in touch with Braith.Site for a new website, redesign, landing page, or website support tailored to your local business.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact | Braith.Site",
+    description:
+      "Get in touch about a new website, redesign, landing page, or ongoing website support.",
+    url: "/contact",
+  },
+  twitter: {
+    title: "Contact | Braith.Site",
+    description:
+      "Get in touch about a new website, redesign, landing page, or ongoing website support.",
+  },
+};
 
 export default function ContactPage() {
   return (

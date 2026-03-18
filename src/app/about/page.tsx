@@ -1,5 +1,26 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About | Braith.Site",
+  description:
+    "Learn more about Braith, a Sydney-based web developer helping local businesses build modern websites that create trust and drive enquiries.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About | Braith.Site",
+    description:
+      "Meet Braith, a Sydney-based web developer focused on clean, modern websites for local businesses.",
+    url: "/about",
+  },
+  twitter: {
+    title: "About | Braith.Site",
+    description:
+      "Meet Braith, a Sydney-based web developer focused on clean, modern websites for local businesses.",
+  },
+};
 
 export default function AboutPage() {
   return (
