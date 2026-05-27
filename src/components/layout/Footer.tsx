@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
-              Braith.Web
+              Braith.Site
             </h3>
             <p className="mt-4 text-sm leading-6 text-slate-500 dark:text-slate-400">
               Modern websites for local businesses. Built to look professional,
@@ -102,7 +102,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-6 text-sm text-slate-500 dark:border-white/10 md:flex-row">
-          <p>(c) {new Date().getFullYear()} Braith.Web All rights reserved.</p>
+          <p>(c) {new Date().getFullYear()} Braith.Site All rights reserved.</p>
         </div>
       </div>
     </footer>
