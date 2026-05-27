@@ -41,13 +41,13 @@ const serviceIcons: Record<ServiceIcon, LucideIcon> = {
 
 export default function ServicesPage() {
   return (
-    <main className="bg-slate-50 dark:bg-slate-950">
+    <main className="page-enter bg-slate-50 dark:bg-slate-950">
       <section className="container-custom py-20 md:py-24">
         <div className="relative overflow-hidden rounded-4xl border border-slate-200 bg-linear-to-br from-white via-slate-50 to-blue-50 px-6 py-12 shadow-sm md:px-10 dark:border-slate-800 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
-          <div className="pointer-events-none absolute -left-16 top-0 hidden h-40 w-40 rounded-full bg-blue-200/50 blur-3xl dark:bg-blue-500/10 md:block" />
-          <div className="pointer-events-none absolute -right-12 bottom-0 hidden h-48 w-48 rounded-full bg-cyan-200/50 blur-3xl dark:bg-cyan-400/10 md:block" />
+          <div className="motion-glow pointer-events-none absolute -left-16 top-0 hidden h-40 w-40 rounded-full bg-blue-200/50 blur-3xl dark:bg-blue-500/10 md:block" />
+          <div className="motion-glow pointer-events-none absolute -right-12 bottom-0 hidden h-48 w-48 rounded-full bg-cyan-200/50 blur-3xl dark:bg-cyan-400/10 md:block" />
 
-          <div className="relative mx-auto max-w-3xl text-center">
+          <div className="relative mx-auto max-w-3xl text-center load-stagger">
             <div className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-medium text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200">
               Services
             </div>
@@ -76,7 +76,7 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap justify-center gap-8">
+        <div className="mt-14 flex flex-wrap justify-center gap-8 scroll-stagger">
           {services.map((service) => (
             <article
               key={service.title}
@@ -138,8 +138,8 @@ export default function ServicesPage() {
 
       <section className="pb-20 md:pb-24">
         <div className="container-custom">
-          <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-linear-to-br from-white via-slate-50 to-blue-50 px-6 py-12 text-center shadow-sm md:px-12 dark:border-slate-800 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
-            <div className="pointer-events-none absolute left-1/2 top-0 hidden h-32 w-32 -translate-x-1/2 rounded-full bg-blue-200/40 blur-3xl dark:bg-blue-500/10 md:block" />
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-linear-to-br from-white via-slate-50 to-blue-50 px-6 py-12 text-center shadow-sm scroll-reveal md:px-12 dark:border-slate-800 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
+            <div className="motion-glow pointer-events-none absolute left-1/2 top-0 hidden h-32 w-32 -translate-x-1/2 rounded-full bg-blue-200/40 blur-3xl dark:bg-blue-500/10 md:block" />
             <h2 className="text-3xl font-semibold text-slate-900 dark:text-slate-100">
               Need something custom?
             </h2>

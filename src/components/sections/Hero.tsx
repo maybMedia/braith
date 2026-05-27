@@ -55,7 +55,7 @@ export default function Hero() {
 
       <div className="container-custom py-24 md:py-32">
         <div className="grid items-center gap-14 lg:grid-cols-2">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl load-stagger">
             <div className="mb-6 inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700">
               Websites for local businesses
             </div>
@@ -106,10 +106,10 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative -mx-3 sm:mx-0">
+          <div className="relative -mx-3 sm:mx-0 scroll-reveal">
             <div className="card relative overflow-hidden border-slate-200 bg-white/90 p-0 shadow-xl backdrop-blur">
-              <div className="pointer-events-none absolute -right-6 -top-6 hidden h-24 w-24 rounded-full bg-blue-200/50 blur-2xl md:block" />
-              <div className="pointer-events-none absolute -bottom-8 -left-8 hidden h-32 w-32 rounded-full bg-slate-300/40 blur-3xl md:block" />
+              <div className="motion-glow pointer-events-none absolute -right-6 -top-6 hidden h-24 w-24 rounded-full bg-blue-200/50 blur-2xl md:block" />
+              <div className="motion-glow pointer-events-none absolute -bottom-8 -left-8 hidden h-32 w-32 rounded-full bg-slate-300/40 blur-3xl md:block" />
 
               <div className="border-b border-slate-200 dark:bg-slate-50 px-5 py-3 rounded-2xl bg-slate-800">
                 <div className="flex items-center gap-2">
