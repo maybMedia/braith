@@ -11,7 +11,7 @@ export default function ProcessSection() {
   return (
     <section className="bg-white dark:bg-slate-950">
       <div className="container-custom py-24">
-        <div className="mx-auto max-w-5xl rounded-3xl border border-slate-200 bg-slate-50/80 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/80">
+        <div className="mx-auto max-w-5xl rounded-3xl border border-slate-200 bg-slate-50/80 p-6 shadow-sm scroll-reveal dark:border-slate-800 dark:bg-slate-900/80">
           <button
             type="button"
             aria-expanded={isOpen}
@@ -58,7 +58,7 @@ export default function ProcessSection() {
             }`}
           >
             <div className="min-h-0">
-              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid gap-6 scroll-stagger md:grid-cols-2 xl:grid-cols-3">
                 {steps.map((step) => (
                   <div
                     key={step.number}

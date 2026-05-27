@@ -8,7 +8,7 @@ export default function PortfolioPreview() {
       <div className="container-custom py-24">
 
         {/* Heading */}
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-2xl text-center scroll-reveal">
           <div className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-medium text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200">
             Portfolio
           </div>
@@ -24,7 +24,7 @@ export default function PortfolioPreview() {
         </div>
 
         {/* Cards */}
-        <div className="mt-14 flex flex-wrap justify-center gap-8">
+        <div className="mt-14 flex flex-wrap justify-center gap-8 scroll-stagger">
           {projects.map((project) => (
             <div
               key={project.title}
@@ -68,7 +68,7 @@ export default function PortfolioPreview() {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 flex justify-center">
+        <div className="mt-12 flex justify-center scroll-reveal">
           <Link href="/portfolio" className="btn-primary">
             View Full Portfolio
           </Link>
