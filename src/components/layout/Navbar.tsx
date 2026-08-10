@@ -16,9 +16,9 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-2 text-lg font-semibold tracking-tight text-slate-900 dark:text-slate-100"
         >
-          <Image src="/images/logos/braith-web-logo.png" alt="Braith.Web" width={48} height={48} />
+          <Image src="/images/logos/braith-web-logo.png" alt="BraithWebDesign.Site" width={48} height={48} />
           <span className="hidden sm:flex items-center gap-0">
-            <span className="text-blue-500 dark:text-blue-300">Braith.</span>
+            <span className="text-blue-500 dark:text-blue-300">BraithWebDesign.</span>
             <span className="text-teal-400 dark:text-teal-200">Site</span>
           </span>
         </Link>

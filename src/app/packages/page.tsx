@@ -7,8 +7,12 @@ import {
   Layers3,
   Package,
   Sparkles,
+  type LucideIcon,
 } from "lucide-react";
 import OfferingsSwitcher from "@/components/navigation/OfferingsSwitcher";
+import { addOns } from "@/data/addOns";
+import { packages } from "@/data/packages";
+import type { PackageIcon } from "@/data/packages";
 
 export const metadata: Metadata = {
   title: "Packages | Braith.Site",
@@ -30,55 +34,11 @@ export const metadata: Metadata = {
   },
 };
 
-const packages = [
-  {
-    name: "Basic",
-    price: "From $349",
-    icon: Package,
-    bestFor: "Small businesses that just need a professional online presence",
-    description:
-      "A simple, polished foundation for businesses that need a clean online presence and a clear way for customers to get in touch.",
-    details: [
-      "Up to 5 pages",
-      "Mobile responsive design",
-      "Contact form",
-      "Social links",
-      "Basic SEO setup",
-    ],
-  },
-  {
-    name: "Basic Plus",
-    price: "From $499",
-    icon: Layers3,
-    bestFor: "Established local businesses wanting a more complete site",
-    description:
-      "A more complete website structure for businesses ready to showcase services, build trust, and guide visitors toward enquiries.",
-    details: [
-      "Up to 8 pages",
-      "Everything in Basic",
-      "Google Maps Integration",
-      "Testimonials and reviews",
-      "Photo gallery",
-      "Analytics",
-    ],
-  },
-  {
-    name: "Business Max",
-    price: "From $699",
-    icon: Sparkles,
-    bestFor: "Businesses wanting to wow their customers and competition",
-    description:
-      "A larger, more refined website package for businesses that want a stronger impression, clearer calls to action, and room for every important page.",
-    details: [
-      "As many pages as needed",
-      "Everything in Basic Plus",
-      "Enhanced enquiry forms",
-      "Enhanced calls to action",
-      "Increased performance optimisation",
-      "Enhanced visual appeal",
-    ],
-  },
-];
+const packageIcons: Record<PackageIcon, LucideIcon> = {
+  package: Package,
+  "layers-3": Layers3,
+  sparkles: Sparkles,
+};
 
 const highlights = [
   {
@@ -95,37 +55,6 @@ const highlights = [
     label: "Built to fit",
     icon: CheckCircle2,
     text: "Package details can stay flexible enough to suit different business types and goals.",
-  },
-];
-
-const addOns = [
-  {
-    name: "Additional page",
-    price: "$25-$49",
-  },
-  {
-    name: "Google Business Profile setup/optimisation",
-    price: "$99",
-  },
-  {
-    name: "Copywriting / rewriting existing content",
-    price: "$50 per page",
-  },
-  {
-    name: "Logo/basic branding",
-    price: "$99-$149",
-  },
-  {
-    name: "Booking system integration",
-    price: "$199",
-  },
-  {
-    name: "Analytics Console setup",
-    price: "$49",
-  },
-  {
-    name: "Website redesign/migration",
-    price: "Quoted based on site",
   },
 ];
 
@@ -173,7 +102,7 @@ export default function PackagesPage() {
 
         <div className="mt-14 grid gap-8 scroll-stagger lg:grid-cols-3">
           {packages.map((item) => {
-            const Icon = item.icon;
+            const Icon = packageIcons[item.icon];
 
             return (
               <article
