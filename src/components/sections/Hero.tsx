@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowUpRight, CheckCircle2, MousePointerClick, Sparkles, Store } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const businessTypes = [
@@ -107,76 +108,122 @@ export default function Hero() {
           </div>
 
           <div className="relative -mx-3 sm:mx-0 scroll-reveal">
-            <div className="card relative overflow-hidden border-slate-200 bg-white/90 p-0 shadow-xl backdrop-blur">
-              <div className="motion-glow pointer-events-none absolute -right-6 -top-6 hidden h-24 w-24 rounded-full bg-blue-200/50 blur-2xl md:block" />
-              <div className="motion-glow pointer-events-none absolute -bottom-8 -left-8 hidden h-32 w-32 rounded-full bg-slate-300/40 blur-3xl md:block" />
+            <div className="absolute -inset-4 rounded-4xl bg-linear-to-br from-blue-500/15 via-cyan-300/10 to-emerald-300/15 blur-2xl dark:from-blue-500/20 dark:via-cyan-400/10 dark:to-emerald-400/10" />
 
-              <div className="border-b border-slate-200 dark:bg-slate-50 px-5 py-3 rounded-2xl bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <span className="h-3 w-3 rounded-full bg-red-400" />
-                  <span className="h-3 w-3 rounded-full bg-amber-400" />
-                  <span className="h-3 w-3 rounded-full bg-green-400" />
+            <div className="relative ml-auto max-w-xl">
+              <div className="relative overflow-hidden rounded-2xl border border-white/70 bg-white shadow-2xl shadow-slate-900/20 dark:border-white/10 dark:bg-slate-950 dark:shadow-black/30">
+                <div className="flex items-center justify-between border-b border-slate-200 bg-slate-950 px-4 py-3 dark:border-white/10">
+                  <div className="flex items-center gap-2">
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                  </div>
+                  <div className="hidden items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs text-slate-200 sm:flex">
+                    <Sparkles className="h-3.5 w-3.5 text-cyan-300" aria-hidden="true" />
+                    Your new website
+                  </div>
+                </div>
+
+                <div className="relative cursor-default select-none overflow-hidden bg-slate-100 p-4 dark:bg-slate-900 sm:p-5">
+                  <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10 dark:border-white/10 dark:bg-slate-950">
+                    <div className="relative min-h-82.5 overflow-hidden bg-linear-to-br from-slate-950 via-blue-950 to-cyan-950 px-5 py-5 text-white sm:min-h-97.5 sm:px-7 sm:py-6">
+                      <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-white/10 to-transparent" />
+                      <div className="absolute -right-20 top-16 h-48 w-48 rounded-full bg-cyan-300/20 blur-3xl" />
+                      <div className="absolute -bottom-16 left-12 h-44 w-44 rounded-full bg-blue-400/25 blur-3xl" />
+
+                      <div className="relative flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-blue-700">
+                            <Store className="h-4 w-4" aria-hidden="true" />
+                          </span>
+                          <span className="text-sm font-semibold">Your Brand</span>
+                        </div>
+                        <div className="hidden items-center gap-5 text-[11px] font-medium uppercase text-white/70 sm:flex">
+                          <span>Services</span>
+                          <span>About</span>
+                          <span>Contact</span>
+                        </div>
+                      </div>
+
+                      <div className="relative pt-14 sm:pt-20">
+                        <p className="mb-4 inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-cyan-100 backdrop-blur">
+                          A trusted local business
+                        </p>
+                        <h3 className="max-w-sm text-4xl font-semibold leading-tight text-white sm:text-5xl">
+                          A sharper first impression.
+                        </h3>
+                        <p className="mt-4 max-w-xs text-sm leading-6 text-slate-200">
+                          Clear branding, call-to-action, and a site that looks the part.
+                        </p>
+                        <div className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-black/20">
+                          Customer Action
+                          <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                        </div>
+                      </div>
+
+                      <div className="absolute bottom-5 right-5 hidden w-44 rounded-lg border border-white/15 bg-white/10 p-3 backdrop-blur-md sm:block">
+                        <div className="mb-3 flex items-center justify-between">
+                          <span className="text-xs font-medium text-white/80">Enquiries</span>
+                          <span className="rounded-full bg-emerald-400/20 px-2 py-0.5 text-[10px] font-semibold text-emerald-100">
+                            Live
+                          </span>
+                        </div>
+                        <div className="space-y-2">
+                          <span className="block h-2 rounded-full bg-white/70" />
+                          <span className="block h-2 w-4/5 rounded-full bg-white/40" />
+                          <span className="block h-2 w-2/3 rounded-full bg-white/25" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-3 gap-3 bg-white p-4 dark:bg-slate-950">
+                      <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-white/10 dark:bg-white/5">
+                        <span className="block h-2 w-10 rounded-full bg-blue-500" />
+                        <span className="mt-4 block h-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                      </div>
+                      <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-white/10 dark:bg-white/5">
+                        <span className="block h-2 w-10 rounded-full bg-cyan-400" />
+                        <span className="mt-4 block h-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                      </div>
+                      <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-white/10 dark:bg-white/5">
+                        <span className="block h-2 w-10 rounded-full bg-emerald-400" />
+                        <span className="mt-4 block h-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="p-6 md:p-8">
-                <div className="rounded-2xl bg-slate-900 p-6 text-white">
-                  <p className="text-sm uppercase tracking-[0.2em] text-blue-200 dark:text-blue-300">
-                    Your new website will have...
-                  </p>
-
-                  <h3 className="mt-3 text-2xl font-semibold text-white">
-                    A cleaner design. Better first impressions. More enquiries.
-                  </h3>
-
-                  <p className="mt-4 text-sm leading-7 text-slate-100 dark:text-slate-300">
-                    A modern website helps your business look trustworthy,
-                    explains your services clearly, and makes it easier for
-                    customers to contact you.
-                  </p>
-
-                  <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                    <div className="rounded-xl bg-white/10 p-4">
-                      <p className="text-2xl font-semibold">Fast</p>
-                      <p className="mt-1 text-xs text-slate-100 dark:text-slate-300">
-                        Smooth experience on all devices
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-lg border border-white/70 bg-white/95 px-4 py-3 shadow-xl shadow-slate-900/10 backdrop-blur dark:border-white/10 dark:bg-slate-950/90">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-300">
+                      <CheckCircle2 className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-medium uppercase text-slate-500 dark:text-slate-400">
+                        Ready to launch
                       </p>
-                    </div>
-
-                    <div className="rounded-xl bg-white/10 p-4">
-                      <p className="text-2xl font-semibold">Modern</p>
-                      <p className="mt-1 text-xs text-slate-100 dark:text-slate-300">
-                        Professional look that builds trust
-                      </p>
-                    </div>
-
-                    <div className="rounded-xl bg-white/10 p-4 sm:col-span-2">
-                      <p className="text-2xl font-semibold">Clear</p>
-                      <p className="mt-1 text-xs text-slate-100 dark:text-slate-300">
-                        Simple messaging that drives action
+                      <p className="text-sm font-semibold text-slate-950 dark:text-white">
+                        Mobile suport, fast, built to convert.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900/80">
-                    <p className="text-sm font-medium text-slate-900 dark:text-slate-100">
-                      Ideal for
-                    </p>
-                    <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">
-                      Cafes, tradies, salons, consultants, gyms, restaurants,
-                      and services.
-                    </p>
-                  </div>
-
-                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900/80">
-                    <p className="text-sm font-medium text-slate-900 dark:text-slate-100">
-                      Includes
-                    </p>
-                    <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">
-                      Mobile friendly design, clear calls to action and contact forms.
-                    </p>
+                <div className="rounded-lg border border-white/70 bg-white/95 px-4 py-3 shadow-xl shadow-slate-900/10 backdrop-blur dark:border-white/10 dark:bg-slate-950/90">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-700 dark:bg-blue-400/15 dark:text-blue-300">
+                      <MousePointerClick className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-medium uppercase text-slate-500 dark:text-slate-400">
+                        Modern Design
+                      </p>
+                      <p className="text-sm font-semibold text-slate-950 dark:text-white">
+                        Built around the enquiry
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
