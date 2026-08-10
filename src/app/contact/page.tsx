@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="page-enter bg-slate-50 dark:bg-slate-950">
-      <section className="container-custom py-12 md:py-14">
+      <section className="container-custom py-20 md:py-24">
         <div className="relative overflow-hidden rounded-4xl border border-slate-200 bg-linear-to-br from-white via-slate-50 to-blue-50 px-6 py-12 shadow-sm md:px-10 dark:border-slate-800 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
           <div className="motion-glow pointer-events-none absolute -left-16 top-0 hidden h-40 w-40 rounded-full bg-blue-200/50 blur-3xl dark:bg-blue-500/10 md:block" />
           <div className="motion-glow pointer-events-none absolute -right-12 bottom-0 hidden h-48 w-48 rounded-full bg-cyan-200/50 blur-3xl dark:bg-cyan-400/10 md:block" />

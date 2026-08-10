@@ -8,7 +8,7 @@ export type ServiceIcon =
 
 export const services = [
   {
-    title: "Goods/Service Website Design",
+    title: "Goods/Service Website",
     icon: "heart-handshake" as const,
     description:
       "Clean, modern websites designed to help your business look professional and make a strong first impression.",
@@ -20,7 +20,7 @@ export const services = [
     ],
   },
   {
-    title: "Cafe/Restaurant Website Design",
+    title: "Cafe/Restaurant Website",
     icon: "utensils-crossed" as const,
     description:
       "Websites for cafes and restaurants that showcase your menu, location, and atmosphere to generate more bookings.",
