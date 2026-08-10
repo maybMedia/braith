@@ -103,7 +103,7 @@ export default function AboutPage() {
 
               <p className="mt-4 text-slate-600 dark:text-slate-300">
                 I pride myself on my connection to my local community and my
-                understanding of the unique challenges and opportunities local
+                understanding of the unique challenges and opportunities localand 
                 businesses face online.
               </p>
 
@@ -120,11 +120,11 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid gap-8 scroll-stagger lg:grid-cols-[0.95fr_1.05fr]">
             <div className="rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/90">
-              <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
+              <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
                 What I focus on
-              </h2>
+              </h3>
 
-              <div className="mt-6 space-y-5 text-slate-600 scroll-stagger dark:text-slate-300">
+              <div className="mt-6 space-y-5 text-slate-600 dark:text-slate-300">
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
                     Clear messaging
@@ -161,11 +161,11 @@ export default function AboutPage() {
               <div className="motion-glow pointer-events-none absolute left-0 top-0 hidden h-24 w-24 rounded-full bg-cyan-100/70 blur-3xl dark:bg-cyan-400/10 md:block" />
 
               <div className="relative">
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
+                <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
                   What working with me looks like
                 </h3>
 
-                <div className="mt-6 space-y-5 text-slate-600 scroll-stagger dark:text-slate-300">
+                <div className="mt-6 space-y-5 text-slate-600 dark:text-slate-300">
                   <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-950">
                     <p className="font-semibold text-slate-900 dark:text-slate-100">
                       Simple communication
