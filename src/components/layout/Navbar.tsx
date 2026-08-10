@@ -34,6 +34,13 @@ export default function Navbar() {
           </Link>
 
           <Link
+            href="/packages"
+            className="transition hover:text-blue-600 dark:hover:text-blue-400"
+          >
+            Packages
+          </Link>
+
+          <Link
             href="/portfolio"
             className="transition hover:text-blue-600 dark:hover:text-blue-400"
           >
@@ -115,6 +122,10 @@ export default function Navbar() {
 
           <Link href="/services" onClick={() => setOpen(false)}>
             Services
+          </Link>
+
+          <Link href="/packages" onClick={() => setOpen(false)}>
+            Packages
           </Link>
 
           <Link href="/portfolio" onClick={() => setOpen(false)}>

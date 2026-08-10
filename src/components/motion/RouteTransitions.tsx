@@ -10,6 +10,30 @@ type ViewTransitionDocument = Document & {
 };
 
 const transitionTimeout = 1200;
+const offeringsRoutes = ["/services", "/packages"];
+
+function getOfferingsTransition(pathname: string, nextPathname: string) {
+  const currentIndex = offeringsRoutes.indexOf(pathname);
+  const nextIndex = offeringsRoutes.indexOf(nextPathname);
+
+  if (currentIndex === -1 || nextIndex === -1) {
+    return null;
+  }
+
+  return nextIndex > currentIndex ? "offerings-forward" : "offerings-back";
+}
+
+function getRouteTransition(
+  anchor: HTMLAnchorElement,
+  pathname: string,
+  nextPathname: string,
+) {
+  if (anchor.dataset.offeringsSwitcher === "true") {
+    return getOfferingsTransition(pathname, nextPathname);
+  }
+
+  return null;
+}
 
 function shouldHandleLinkClick(event: MouseEvent, anchor: HTMLAnchorElement) {
   if (
@@ -78,11 +102,23 @@ export default function RouteTransitions() {
 
       const url = new URL(anchor.href);
       const href = `${url.pathname}${url.search}${url.hash}`;
+      const transitionName = getRouteTransition(
+        anchor,
+        window.location.pathname,
+        url.pathname,
+      );
 
       const navigationSettled = new Promise<void>((resolve) => {
         resolveTransitionRef.current = resolve;
         window.setTimeout(resolve, transitionTimeout);
       });
+
+      if (transitionName) {
+        document.documentElement.dataset.routeTransition = transitionName;
+        document.documentElement.dataset.suppressPageEnter = "true";
+      } else {
+        delete document.documentElement.dataset.suppressPageEnter;
+      }
 
       viewTransitionDocument
         .startViewTransition(() => {
@@ -91,6 +127,7 @@ export default function RouteTransitions() {
         })
         .finished.finally(() => {
           resolveTransitionRef.current = null;
+          delete document.documentElement.dataset.routeTransition;
         });
     };
 

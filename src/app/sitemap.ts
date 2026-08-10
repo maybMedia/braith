@@ -11,6 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: "https://www.braithwebdesign.site/packages",
+      lastModified: new Date(),
+    },
+    {
       url: "https://www.braithwebdesign.site/portfolio",
       lastModified: new Date(),
     },

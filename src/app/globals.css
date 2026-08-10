@@ -118,6 +118,54 @@ body {
   }
 }
 
+@keyframes offerings-forward-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes offerings-forward-in {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes offerings-back-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes offerings-back-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .page-enter {
     animation: page-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -194,6 +242,46 @@ body {
 
   ::view-transition-new(root) {
     animation: route-in 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  html[data-suppress-page-enter="true"] .page-enter {
+    animation: none;
+  }
+
+  html[data-route-transition^="offerings"] .offerings-transition-content {
+    view-transition-name: offerings-content;
+  }
+
+  html[data-route-transition="offerings-forward"]::view-transition-old(root) {
+    animation: none;
+  }
+
+  html[data-route-transition="offerings-forward"]::view-transition-new(root) {
+    animation: none;
+  }
+
+  html[data-route-transition="offerings-back"]::view-transition-old(root) {
+    animation: none;
+  }
+
+  html[data-route-transition="offerings-back"]::view-transition-new(root) {
+    animation: none;
+  }
+
+  html[data-route-transition="offerings-forward"]::view-transition-old(offerings-content) {
+    animation: offerings-forward-out 420ms cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+
+  html[data-route-transition="offerings-forward"]::view-transition-new(offerings-content) {
+    animation: offerings-forward-in 420ms cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+
+  html[data-route-transition="offerings-back"]::view-transition-old(offerings-content) {
+    animation: offerings-back-out 420ms cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+
+  html[data-route-transition="offerings-back"]::view-transition-new(offerings-content) {
+    animation: offerings-back-in 420ms cubic-bezier(0.4, 0, 0.2, 1) both;
   }
 
 }
