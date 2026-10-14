@@ -24,14 +24,14 @@ export default function PortfolioPreview() {
         </div>
 
         {/* Cards */}
-        <div className="mt-14 flex flex-wrap justify-center gap-8 scroll-stagger">
+        <div className="mt-14 flex flex-wrap items-stretch justify-center gap-8 scroll-stagger">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group flex h-full w-full max-w-md flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.35rem)] dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-500/40 dark:hover:shadow-slate-950/40"
+              className="group flex w-full max-w-md flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.35rem)] dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-500/40 dark:hover:shadow-slate-950/40"
             >
               {/* Image */}
-              <div className="relative h-52 w-full overflow-hidden">
+              <div className="relative h-52 w-full shrink-0 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}

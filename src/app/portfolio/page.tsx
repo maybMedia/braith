@@ -59,15 +59,15 @@ export default function PortfolioPage() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap justify-center gap-8 scroll-stagger">
+        <div className="mt-14 flex flex-wrap items-stretch justify-center gap-8 scroll-stagger">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group relative flex h-full w-full max-w-2xl flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.35rem)] dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-500/40 dark:hover:shadow-slate-950/40"
+              className="group relative flex w-full max-w-2xl flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.35rem)] dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-500/40 dark:hover:shadow-slate-950/40"
             >
               <div className="pointer-events-none absolute right-0 top-0 hidden h-28 w-28 rounded-full bg-blue-100/70 blur-3xl transition duration-300 group-hover:bg-blue-200/80 dark:bg-blue-500/10 dark:group-hover:bg-blue-400/15 md:block" />
 
-              <div className="relative h-56 w-full bg-slate-200 dark:bg-slate-800">
+              <div className="relative h-56 w-full shrink-0 bg-slate-200 dark:bg-slate-800">
                 <Image
                   src={project.image}
                   alt={project.title}
